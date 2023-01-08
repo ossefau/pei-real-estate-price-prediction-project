@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PEI Home Price Predictor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <h1 id="title">PEI Home Price Predictor</h1>
+    <div class="img"></div>
+    <form class="form">
+      <h2>Area (Square Feet)</h2>
+      <input class="area" type="text" id="uiSqft" class="floatLabel" name="Squareft" value="">
+      <h2>Bedrooms</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-bhk-1" name="uiBHK" value="1" />
+        <label for="radio-bhk-1">1</label>
+        <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" />
+        <label for="radio-bhk-2">2</label>
+        <input type="radio" id="radio-bhk-3" name="uiBHK" value="3" />
+        <label for="radio-bhk-3">3</label>
+        <input type="radio" id="radio-bhk-4" name="uiBHK" value="4" />
+        <label for="radio-bhk-4">4</label>
+        <input type="radio" id="radio-bhk-5" name="uiBHK" value="5" />
+        <label for="radio-bhk-5">5</label>
+        <input type="radio" id="radio-bhk-6" name="uiBHK" value="6" />
+        <label for="radio-bhk-6">6</label>
+        <input type="radio" id="radio-bhk-7" name="uiBHK" value="7" />
+        <label for="radio-bhk-7">7</label>
+      </div>
+    </form>
+    <form class="form">
+      <h2>Bathrooms</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1" />
+        <label for="radio-bath-1">1</label>
+        <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" />
+        <label for="radio-bath-2">2</label>
+        <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3" />
+        <label for="radio-bath-3">3</label>
+        <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4" />
+        <label for="radio-bath-4">4</label>
+        <input type="radio" id="radio-bath-5" name="uiBathrooms" value="5" />
+        <label for="radio-bath-5">5</label>
+        <input type="radio" id="radio-bath-6" name="uiBathrooms" value="6" />
+        <label for="radio-bath-6">6</label>
+        <input type="radio" id="radio-bath-7" name="uiBathrooms" value="7" />
+        <label for="radio-bath-7">7</label>
+        
+      </div>
+      <h2>Location</h2>
+      <div>
+        <select class="location" name="" id="uiLocations">
+          <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+          <option>Charlottetown</option>
+          <option>Stratford</option>
+          <option>Cornwall</option>
+        </select>
+      </div>
+      <h2>Property Type</h2>
+      <div>
+        <select class="ptype" name="" id="uiProperty">
+          <option value="" disabled="disabled" selected="selected">Choose a Property Type</option>
+          <option>Apartments</option>
+          <option>Duplex</option>
+          <option>House/Single Family</option>
+          <option>Row / Townhouse</option>
+        </select>
+      </div>
+      <h2>Attachment Type</h2>
+      <div>
+        <select class="atype" name="" id="uiAttachment">
+          <option value="" disabled="disabled" selected="selected">Choose an Attachment Type</option>
+          <option>Attached</option>
+          <option>Detached</option>
+          <option>Semi-detached</option>
+        </select>
+      </div>
+      <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+      <div id="uiEstimatedPrice" class="result">
+        <h2></h2>
+      </div>
+  </body>
+</html>
